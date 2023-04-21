@@ -42,8 +42,8 @@
     /* box-sizing: border-box; */
     width: 95%;
     border: 2px solid var(--mycolor014);
-    padding: 20px;
-    margin: 20px;
+    padding: 1rem;
+    margin: 0 auto
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
