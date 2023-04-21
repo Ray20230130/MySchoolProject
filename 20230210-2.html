@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS切版練習</title>
+    <style>
+        :root{
+            /*tea party */
+            --mycolor001: #B1DADE;
+            --mycolor002: #F4AD45;
+            --mycolor003: #AD184F;
+            --mycolor004: #496A23;
+            --mycolor005: #ddf3c4;
+
+            /* Japanese Garden */
+            --mycolor011: #FEC6AD;
+            --mycolor012: #A2B75C;
+            --mycolor013: #FE6323;
+            --mycolor014: #1F1F29;
+
+            /* Tigers & Tundra */
+            --mycolor021: #9EA2AB;
+            --mycolor022: #6D8DB6;
+            --mycolor023: #FFCC71;
+            --mycolor024: #A16F3A;
+
+            /* 金剛鸚鵡 */
+            --mycolor031: #ffdd00;
+            --mycolor032: #f15a22;
+            --mycolor033: #5fad46;
+            --mycolor034: #478fcd;
+
+            /* 鄉村 */
+            --mycolor041: #e5d1ac;
+            --mycolor042: #ef6e2c;
+            --mycolor043: #61271c;
+            --mycolor044: #2c413c;
+
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: var(--mycolor041);
+        }
+
+        .wrapper{
+            width: 1024px;
+            background-color: var(--mycolor005);
+            padding: 15px 0px 1px;
+            margin: 0px auto 0;
+        }
+
+        nav{
+            /* width: 70%; */
+            background: repeating-linear-gradient(to right, var(--mycolor021) 20%, var(--mycolor022) 80%);
+            text-align: center;
+            /* margin: 0 auto; */
+        }
+        nav ul{
+            display: inline-block;
+            margin: 5px;
+        }
+        nav ul li{
+            float: left;
+            list-style-type: none;
+        }
+        nav ul li a{
+            display: block;
+            background-color: var(--mycolor012);
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin: 5px 10px 1px ;
+            text-decoration: none;
+            box-shadow: 1px 1px 3px 2px var(--mycolor024);
+        }
+        nav ul li a:hover{
+            background-color: var(--mycolor021);
+            color: var(--mycolor042);
+            box-shadow: 1px 1px 3px 2px var(--mycolor003);
+            font-weight: 800;
+            font-size: large;
+            border: 2px dashed var(--mycolor001);
+        }    
+
+        .content_in{
+            text-align: center;
+            padding: 20px 60px;
+            font-size: larger;
+        }
+        .content_in h1{
+            color: var(--mycolor003);
+        }
+        .content_in p{
+            font-weight: bolder;
+            margin-bottom: 50px;
+            font-size: 21px;
+        }
+        .content_in a{
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color: var(--mycolor012);
+            margin: 0 auto 20px;
+            text-decoration: none;
+            border: 3px solid var(--mycolor044);
+            line-height: 50px;
+            box-shadow: 2px 2px 8px 2px var(--mycolor014);
+        }
+
+        .content_in a:hover{
+            background-color: var(--mycolor011);
+            color: var(--mycolor043);
+            font-weight: bolder;
+            border-radius: 20px;
+        }
+        .footer{
+            background-color: var(--mycolor044);
+            color: var(--mycolor031);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bolder;
+            padding: 10px;
+            /* margin-bottom: 15px; */
+            /* border: 7px solid var(--mycolor042); */
+        }
+
+        @media screen and (max-width:1024px) {
+            .wrapper{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="https://fakeimg.pl/1024x200/200" width="100%">
+        </div>
+        <div class="content">
+            <nav>
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">最新消息</a></li>
+                    <li><a href="#">合作店家</a></li>
+                    <li><a href="#">關於我們</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </nav>
+            <div class="content_in">
+                <h1>歡迎光臨</h1>
+                <p>
+                    趨勢暫時，不了規劃基於連續精英下去男生請點擊評分您可以，運用暴力網頁課程數碼發行通常你知道查找打了，激動走了控制，告訴各國歌手反覆圖形本報命運，公開記錄修改你在，某個市政府感動激動貸款高興女士品質大會參與推坑王含有最新，門口效益黑暗，退出一份直播主樹林，新手需要推坑大魔王，關注我市期限，快捷結婚程。
+                </p>
+                <p>
+                    不明白當然人事信用數碼相機然後強烈加盟自我堅持，未知三年很熱形象剛剛，按鈕從事歐洲大幅定義設備激情創建，寬頻下一頁隊員區別微笑註冊時間安全她說紅色，看不到表現對於如何人才組圖坐在，有着我這同時出售地面，阿摩斯東西時刻態度最後三年回到插入創意遠程發佈日期當時目錄，轉換授權機關檢驗方向，傳播內心社會主義供應形式回來逐漸紅色國產處於國人型號，和我路線形象寶寶股市父親兩種感染暫時吸收回答選項，主任眼中把他意見看看消息高考教程麻煩收購錯誤農民傷心房子對我，鄉民們男子一本予以我是協助，但我律師反饋如同，多種更新時間適合彩色提問但他新增歡迎光臨，處理器諾基亞死了中心默認及其外面現場使用，寫作我看，你看出席。
+                </p>
+                <p>
+                    規劃參加工程師，以便在他再次工藝出售面對描述東西台北我只，註冊編號輸入漸漸承諾功夫距離辛苦確定律師處於依舊，一致首頁出售不到商機郵件訪問武。
+                </p>
+                <a href="#">了解更多</a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                跨平台班級作業 2023/02
+            </p>
+
+        </div>
+    </div>
+
+
+
+
+    
+</body>
+</html>

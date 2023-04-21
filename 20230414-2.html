@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form 課堂練習</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/myCSS.css">
+  <style>
+    .btn01 {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="demo">
+      <h4 class="bg-black text-light p-3 text-center">首頁</h4>
+
+      <!-- 帳號 -->
+      <div class="row mt-3">
+        <div class="col-3">
+          <label for="username">帳號</label>
+        </div>
+        <div class="col-6">
+          <input type="text" class="form-control" name="username" id="username" placeholder="請輸入帳號，字數 5 ~ 10 !!">
+        </div>
+        <div class="col-3 errmsg" id="uNerrmsg"></div>
+      </div>
+
+      <!-- 密碼 -->
+      <div class="row mt-3">
+        <div class="col-3">
+          <label for="userpassword">密碼</label>
+        </div>
+        <div class="col-6">
+          <input type="password" class="form-control" name="userpassword" id="userpassword"
+            placeholder="請輸入密碼，字數 3 ~ 10 !!">
+        </div>
+        <div class="col-3 errmsg" id="uPSerrmsg"></div>
+      </div>
+
+      <!-- 密碼確認 -->
+      <div class="row mt-3">
+        <div class="col-3">
+          <label for="repassword">密碼確認</label>
+        </div>
+        <div class="col-6">
+          <input type="password" class="form-control" name="repassword" id="repassword" placeholder="請再輸入密碼!!">
+        </div>
+        <div class="col-3 errmsg" id="uRPerrmsg"></div>
+      </div>
+
+      <!-- Email -->
+      <div class="row mt-3">
+        <div class="col-3">
+          <label for="useremail">Email</label>
+        </div>
+        <div class="col-6">
+          <input type="email" class="form-control" name="useremail" id="useremail" placeholder="請輸入email，字數 5 ~ 12 !!">
+          <div class="valid-feedback">格式正確</div>
+          <div class="invalid-feedback">格式錯誤</div>
+        </div>
+
+      </div>
+
+      <!-- 生日 -->
+      <div class="row mt-3">
+        <div class="col-3">
+          <label for="userbirth">生日</label>
+        </div>
+        <div class="col-9">
+          <input type="date" class="form-control" name="userbirth" id="userbirth">
+        </div>
+      </div>
+
+      <!-- 年齡 -->
+      <div class="row mt-3">
+        <div class="col-3">
+          <label for="userage">年齡(需成年)</label>
+        </div>
+        <div class="col-2">
+          <div class="userage form-control text-center">0</div>
+        </div>
+        <div class="col-6">
+          <input type="range" class="form-range" name="userage" id="userage" min="0" max="120" value="0">
+        </div>
+      </div>
+
+      <!-- 最高學歷 -->
+      <div class="row mt-3">
+        <div class="col-3">
+          <label for="useredu">最高學歷</label>
+        </div>
+        <div class="col-9">
+          <select class="form-select" name="useredu" id="useredu">
+            <option value="研究所">研究所</option>
+            <option value="大學/專">大學/專</option>
+            <option value="高中">高中</option>
+            <option value="高中以下">高中以下</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 興趣(複選) userhobby -->
+      <div class="row mt-3">
+
+        <div class="col-3">
+          <label for="">興趣(複選)</label>
+        </div>
+
+        <div class="col-9">
+
+          <div class="form-check-inline">
+            <input type="checkbox" class="form-check-input" name="userhobby" id="running" value="跑步">
+            <label for="running">跑步</label>
+          </div>
+          <div class="form-check-inline">
+            <input type="checkbox" class="form-check-input" name="userhobby" id="swimming" value="游泳">
+            <label for="swimming">游泳</label>
+          </div>
+          <div class="form-check-inline">
+            <input type="checkbox" class="form-check-input" name="userhobby" id="basketball" value="籃球">
+            <label for="basketball">籃球</label>
+          </div>
+          <div class="form-check-inline">
+            <input type="checkbox" class="form-check-input" name="userhobby" id="reading" value="看書">
+            <label for="reading">看書</label>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 血型(單選) -->
+      <div class="row mt-3">
+        <div class="col-3">
+          <label for="">血型(單選)</label>
+        </div>
+        <div class="col-9">
+
+          <div class="form-check-inline">
+            <input type="radio" class="form-check-input" name="blood_type" id="A_type" value="A_type">
+            <label for="A_type">A型</label>
+          </div>
+          <div class="form-check-inline">
+            <input type="radio" class="form-check-input" name="blood_type" id="B_type" value="B_type">
+            <label for="B_type">B型</label>
+          </div>
+          <div class="form-check-inline">
+            <input type="radio" class="form-check-input" name="blood_type" id="AB_type" value="AB_type">
+            <label for="AB_type">AB型</label>
+          </div>
+          <div class="form-check-inline">
+            <input type="radio" class="form-check-input" name="blood_type" id="O_type" value="O_type">
+            <label for="O_type">O型</label>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 確認按鈕 -->
+      <button class="btn01 btn btn-dark mt-3" id="btn01">確認</button>
+
+
+      <!-- 資料顯示區 -->
+      <div class="container">
+        <div class="demo">
+          <div id="showmsg"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+
+  <script>
+
+    $('#userage').on('input', function () {
+      $('.userage').html($(this).val())
+    });
+
+    var flag_username = false;
+    var flag_password = false;
+    var flag_repassword = false;
+    var flag_email = false;
+    var flag_age = false;
+
+
+
+    $(function () {
+      /* 🚍 即時監聽 */
+
+      /*帳號監聽*/
+      $('#username').bind('input propertychange', function () {
+        if ($(this).val().length > 5 && $(this).val().length < 11) {
+          $('#uNerrmsg').html(
+            '<p>帳號：' + '格式正確' + '</p>'
+          )
+          $('#uNerrmsg').css('color', 'green')
+          flag_username = true;
+        } else {
+          $('#uNerrmsg').html(
+            '<p>帳號：' + '格式錯誤' + '</p>'
+          )
+          $('#uNerrmsg').css('color', 'red')
+          flag_username = false;
+        }
+      });
+
+      /*密碼監聽*/
+      $('#userpassword').bind('input propertychange', function () {
+        if ($(this).val().length > 3 && $(this).val().length < 11) {
+          $('#uPSerrmsg').html(
+            '<p>帳號：' + '格式正確' + '</p>'
+          )
+          $('#uPSerrmsg').css('color', 'green')
+          flag_password = true;
+        } else {
+          $('#uPSerrmsg').html(
+            '<p>帳號：' + '格式錯誤' + '</p>'
+          )
+          $('#uPSerrmsg').css('color', 'red')
+          flag_password = false;
+        }
+      })
+
+      /*密碼確認監聽*/
+      $('#repassword').bind('input propertychange', function () {
+
+        if ($(this).val() === $('#userpassword').val()) {
+          $('#uRPerrmsg').html(
+            '<p>帳號：' + '格式正確' + '</p>'
+          );
+          $('#uRPerrmsg').css('color', 'green');
+          flag_repassword = true;
+        } else {
+          $('#uRPerrmsg').html(
+            '<p>帳號：' + '格式錯誤' + '</p>'
+          );
+          $('#uRPerrmsg').css('color', 'red');
+          flag_repassword = false;
+        }
+
+      })
+
+      /*Email監聽*/
+      $('#useremail').bind('input propertychange', function () {
+        if ($(this).val().length > 5 && $(this).val().length < 12) {
+          $(this).removeClass('is-invalid');
+          $(this).addClass('is-valid');
+          flag_email = true;
+        } else {
+          $(this).removeClass('is-valid');
+          $(this).addClass('is-invalid');
+          flag_email = false;
+        }
+      });
+
+      /*age監聽*/
+      $('#userage').on('input', function () {
+        $('.userage').html($(this).val());
+        if ($(this).val() >= 18) {
+          flag_age = true;
+        } else {
+          flag_age = false;
+        }
+      });
+
+      // var flag_all = flag_username && flag_password && flag_repassword && flag_email && flag_age
+
+
+      //按鈕的監聽
+      $('#btn01').click(function () {
+
+        var flag_all = flag_username && flag_password && flag_repassword && flag_email && flag_age
+
+        if (flag_all) {
+
+          // 興趣的資料蒐集
+          var userhobby = [];
+
+          $.each($("input[name = 'userhobby']:checked"), function () {
+            console.log($(this).val());
+            userhobby.push($(this).val());
+          });
+          console.log(userhobby);
+
+          // 血型的資料蒐集
+          var blood_type = [];
+          $.each($("input[name = 'blood_type']:checked"), function () {
+            blood_type.push($(this).val());
+          });
+          console.log(blood_type);
+
+
+          $('#showmsg').html(
+            '<h4>帳號：' + $('#username').val() + '</h4>' +
+            '<h4>密碼：' + $('#userpassword').val() + '</h4>' +
+            '<h4>Email：' + $('#useremail').val() + '</h4>' +
+            '<h4>生日：' + $('#userbirth').val() + '</h4>' +
+            '<h4>年齡：' + $('#userage').val() + '歲</h4>' +
+            '<h4>最高學歷：' + $('#useredu').val() + '</h4>' +
+            '<h4>興趣：' + userhobby + '</h4>' +
+            '<h4>血型：' + blood_type + '</h4>'
+
+          );
+
+        } else {
+          alert('填寫資料錯誤!!!')
+        }
+      });
+    });
+
+
+
+  </script>
+</body>
+
+</html>
