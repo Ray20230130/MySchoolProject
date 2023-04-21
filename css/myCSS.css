@@ -1,0 +1,58 @@
+:root {
+    /*tea party */
+    --mycolor001: #B1DADE;
+    --mycolor002: #F4AD45;
+    --mycolor003: #AD184F;
+    --mycolor004: #496A23;
+    --mycolor005: #ddf3c4;
+
+    /* Japanese Garden */
+    --mycolor011: #FEC6AD;
+    --mycolor012: #A2B75C;
+    --mycolor013: #FE6323;
+    --mycolor014: #1F1F29;
+
+    /* Tigers & Tundra */
+    --mycolor021: #9EA2AB;
+    --mycolor022: #6D8DB6;
+    --mycolor022-1: #375070;
+    --mycolor023: #FFCC71;
+    --mycolor023-1: #f1ddbb;
+    --mycolor023-2: #f3e9d6;
+    --mycolor024: #A16F3A;
+
+    /* 鄉村 */
+    --mycolor041: #e5d1ac;
+    --mycolor042: #ef6e2c;
+    --mycolor043: #61271c;
+    --mycolor044: #2c413c;
+
+    /* myself */
+    --mycolor051: #d5cd44;
+    --mycolor052: #80c5af;
+    --mycolor053: #bd663a;
+    --mycolor054: #5788a2;
+    --mycolor055: #3e3a51;
+    --mycolor055: #33977d;
+    
+
+
+}
+.demo {
+    /* box-sizing: border-box; */
+    width: 95%;
+    border: 2px solid var(--mycolor014);
+    padding: 20px;
+    margin: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.fw-700{
+    font-weight: 700;
+}
+.fw-900{
+    font-weight: 900;
+}
