@@ -243,7 +243,7 @@
     <div class="demo bg-secondary">
       <div class="col-6 mx-auto">
         <div class="card p-2">
-          <img src="https://source.unsplash.com/4dZMVjr99pY" alt="" class="card-img-top">
+          <img src="https://source.unsplash.com/WN1VT_5Ww1E" alt="" class="card-img-top">
           <div class="card-body">
             <div class="card-title">型號：</div>
             <div class="card-text">
@@ -255,11 +255,12 @@
           </div>
         </div>
       </div>
+
       <hr>
 
       <div class="col-8 mx-auto">
         <div class="card">
-          <img src="https://source.unsplash.com/4dZMVjr99pY" alt="" class="card-img-top">
+          <img src="https://source.unsplash.com/wb6dyvkqpyo" alt="" class="card-img-top">
           <div class="card-header fs-2 text-bg-info">XXX 機車</div>
           <div class="card-body">
             <div class="card-title">型號：</div>
@@ -279,6 +280,53 @@
             </ul>
           </div>
           <div class="card-footer">頁尾</div>
+        </div>
+      </div>
+
+            
+      <hr>
+
+      <!-- Navigation -->
+      <div class="fs-3 text-light">Navigation</div>
+      <div class="card text-center col-8">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item" id="item01">
+              <a class="nav-link active" aria-current="true">體育</a>
+            </li>
+            <li class="nav-item"  id="item02">
+              <a class="nav-link">娛樂</a>
+            </li>
+            <li class="nav-item"  id="item03">
+              <a class="nav-link">3C</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body" id="showmsg">
+          <div class="row">
+            <div class="col-md-7">
+              <img src="https://source.unsplash.com/wb6dyvkqpyo" alt="" class="card-img-top">
+              <div class="row">
+                <div class="col-md-6 pe-0">
+                  <img src="https://source.unsplash.com/h4i9G-de7Po" alt="" class="card-img-top">
+                </div>
+                <div class="col-md-6 ps-0">
+                  <img src="https://source.unsplash.com/ywYmj3fiMhc" alt="" class="card-img-top">
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-5">
+              <h6><a href="" class="">監督不如題發達更為才會</a></h6>
+              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>
+              <h6><a href="" class="">監督不如題發達更為才會</a></h6>
+              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>
+              <h6><a href="" class="">監督不如題發達更為才會</a></h6>
+              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>
+              <h6><a href="" class="">監督不如題發達更為才會</a></h6>
+              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -306,6 +354,41 @@
 
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function(){
+      $('#item01').click(function(){
+        $('#item01 a').addClass('active')
+        $('#item02 a').removeClass('active')
+        $('#item03 a').removeClass('active')
+
+        let strHTML = '<div class="row"><div class="col-md-7"><img src="https://source.unsplash.com/wb6dyvkqpyo" alt="" class="card-img-top"><div class="row"><div class="col-md-6 pe-0"><img src="https://source.unsplash.com/h4i9G-de7Po" alt="" class="card-img-top"></div><div class="col-md-6 ps-0"><img src="https://source.unsplash.com/ywYmj3fiMhc" alt="" class="card-img-top"></div></div></div><div class="col-md-5"><h6><a href="" class="">監督不如題發達更為才會</a></h6><p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p><h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>              <h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>              <h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>            </div>          </div>'
+
+        $('#showmsg').html(strHTML)
+      })
+
+      $('#item02').click(function(){
+        $('#item01 a').removeClass('active')
+        $('#item02 a').addClass('active')
+        $('#item03 a').removeClass('active')
+
+        let strHTML = '<div class="row"><div class="col-md-7"><img src="https://source.unsplash.com/mSOO58gAtYk" alt="" class="card-img-top"><div class="row"><div class="col-md-6 pe-0"><img src="https://source.unsplash.com/bPXcUtriJCM" alt="" class="card-img-top"></div><div class="col-md-6 ps-0"><img src="https://source.unsplash.com/KiyjKXhAxXM" alt="" class="card-img-top"></div></div></div><div class="col-md-5"><h6><a href="" class="">監督不如題發達更為才會</a></h6><p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p><h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>              <h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>              <h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>            </div>          </div>'
+
+        $('#showmsg').html(strHTML)
+      })
+
+      $('#item03').click(function(){
+        $('#item01 a').removeClass('active')
+        $('#item02 a').removeClass('active')
+        $('#item03 a').addClass('active')
+
+        let strHTML = '<div class="row"><div class="col-md-7"><img src="https://source.unsplash.com/KReIf8P-FYU" alt="" class="card-img-top"><div class="row"><div class="col-md-6 pe-0"><img src="https://source.unsplash.com/7w8bmQJmVNs" alt="" class="card-img-top"></div><div class="col-md-6 ps-0"><img src="https://source.unsplash.com/A8MPUSQLFBw" alt="" class="card-img-top"></div></div></div><div class="col-md-5"><h6><a href="" class="">監督不如題發達更為才會</a></h6><p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p><h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>              <h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>              <h6><a href="" class="">監督不如題發達更為才會</a></h6>              <p class="text-truncate">神經坐在維護則是，招標提醒夥伴，小七體。</p>            </div>          </div>'
+
+        $('#showmsg').html(strHTML)
+      })
+      
+        
+    });
+  </script>
 </body>
 
 </html>
