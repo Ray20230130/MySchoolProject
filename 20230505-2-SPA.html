@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SPA練習 - 餐廳</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/myCSS.css">
+
+  <script src="https://kit.fontawesome.com/709b8293ad.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background-color: rgba(182, 194, 218, 0.596);
+    }
+
+    .bg-cover {
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .carousel-caption {
+      font-weight: 600;
+      background-color: rgba(72, 68, 114, 0.4);
+    }
+
+    .section09_text {
+      background-color: #ffffff77;
+      padding: 2rem;
+    }
+
+    .section04{
+      background: linear-gradient(0deg, #3eb1a1, #b9e9e2);
+    }
+
+    .section04 .col-md-4:hover{
+      background-color: #b5c2c052;
+    }
+
+    #section05-pic05,#section11-pic11{
+      border-radius: 0rem 1rem 1rem 0rem;
+    }
+
+    #section07-pic07{
+      border-radius: 1rem 0rem 0rem 1rem;
+    }
+
+    @media screen and (max-width:768px) {
+      .section05 .container {
+        background-color: rgba(165, 130, 35, 0.3);
+        color: #fff;
+        padding: 1rem;
+        text-shadow: 2px 2px #996f15;
+      }
+
+      .section05 .container button {
+        background-color: rgb(161, 129, 24);
+        border: 1px solid #fff;
+        color: #fff;
+        font-weight: 800;
+      }
+
+      #section05-pic05 {
+        z-index: -1;
+        right: 0;
+        border-radius: 0
+      }
+
+      .section07 .container {
+        background-color: rgba(134, 92, 52, 0.3);
+        color: #fff;
+        padding: 1rem;
+        text-shadow: 2px 2px #995515;
+      }
+
+      #section07-pic07 {
+        z-index: -1;
+        left: 0;
+        border-radius: 0
+      }
+
+      .section11 .container {
+        background-color: rgba(175, 167, 160, 0.445);
+        color: #fff;
+        padding: 1rem;
+        text-shadow: 2px 2px #63370ea2;
+      }
+
+      #section11-pic11 {
+        z-index: -1;
+        right: 0;
+        border-radius: 0
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ******* section01 ******* -->
+  <section class="bg-secondary">
+    <div class="container text-end fs-4">
+      <a href="https://zh-tw.facebook.com/" class="text-light"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="https://twitter.com/?lang=zh-Hant" class="text-light"><i class="fa-brands fa-square-twitter"></i></a>
+    </div>
+  </section>
+
+  <!-- ******* section02 Nav ******* -->
+  <section class="bg-dark">
+    <div class="container">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="fa-solid fa-utensils fa-2x"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">關於我們</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section04">服務項目</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section05">場地空間</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section06">客製化菜單</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section07">特選食材</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section08">聯絡我們</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section11">消息公告</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section09">加入我們</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  訂位
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">一般定位</a></li>
+                  <li><a class="dropdown-item" href="#">多人包廂</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">場地租借</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <button class="btn btn-outline-success me-2" data-bs-toggle="modal"
+                data-bs-target="#Sign-in-Modal">Sign-in</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                data-bs-target="#Sign-up-Modal">Sign-up</button>
+            </div>
+
+            <!-- Sign-in Modal -->
+            <div class="modal fade" id="Sign-in-Modal" tabindex="-1" aria-labelledby="Sign-in-ModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header  bg-success">
+                    <h1 class="modal-title fs-5 text-white" id="Sign-in-ModalLabel">會員登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="" class="form-label">帳號：</label>
+                      <input type="text" name="username" id="" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">密碼：</label>
+                      <input type="password" name="username" id="" class="form-control">
+                    </div>
+                  </div>
+                  <div class="modal-footer d-flex">
+                    <a href="#" class="me-auto" data-bs-toggle="modal" data-bs-target="#Sign-up-Modal">還沒註冊帳號?</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確認</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sign-up Modal -->
+            <div class="modal fade" id="Sign-up-Modal" tabindex="-1" aria-labelledby="Sign-up-ModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header bg-danger">
+                    <h1 class="modal-title fs-5 text-white" id="Sign-up-ModalLabel">會員註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h3>我已閱讀並同意</h3>
+                        <p class="p-3">
+                          當您勾選「我同意」本同意書時，<br>表示您已閱讀、瞭解並同意接受本同意書之所有內容及其後修改變更規定。<br>若您未滿二十歲，應於您的法定代理人閱讀、瞭解並同意本同意書之所有內容及其後修改變更規定後，<br>方得使用本服務，但若您已接受本服務，視為您已取得法定代理人之同意，並遵守以下所有規範。
+                        </p>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="" class="form-label">帳號：</label>
+                          <input type="text" name="username" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">信箱：</label>
+                          <input type="email" name="username" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">密碼：</label>
+                          <input type="password" name="username" id="" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">確認密碼：</label>
+                          <input type="password" name="username" id="" class="form-control">
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            我已閱讀並同意
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer d-flex">
+                    <a href="#" class="me-auto" data-bs-toggle="modal" data-bs-target="#Sign-in-Modal">我已有帳號！</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確認</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- ******* section03 照片輪播牆 ******* -->
+  <section class="">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item bg-cover active"
+          style="background-image: url(https://source.unsplash.com/4J059aGa5s4); height: 650px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>下生響復呢成、靜所時拿我像事</h5>
+            <p>中著結！甚希愛親第費度：間麼他行要議；未活方未收西，小參的……大望時假夜傷知，政功子庭似。工們果德聲重再還理熱我。十相物城他，量究其更設風樂班角：英北方轉上與望後，現車來種。有</p>
+          </div>
+        </div>
+        <div class="carousel-item bg-cover"
+          style="background-image: url(https://source.unsplash.com/1Shk_PkNkNw); height: 650px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>一家發子他總是馬家。問一然</h5>
+            <p>留縣人打們食離感。力族在他國法山來那一法。心也系了甚經作？展少技歡朋著。反他系：連原北正紀不吸體理！的子歡</p>
+          </div>
+        </div>
+        <div class="carousel-item bg-cover"
+          style="background-image: url(https://source.unsplash.com/jpkfc5_d-DI); height: 650px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>隊孩機細價加個好信票老列</h5>
+            <p>
+              他清中著結！甚希愛親第費度：間麼他行要議；未活方未收西，小參的……大望時假夜傷知，政功子庭似。工們果德聲重再還理熱我。十相物城他，量究其更設風樂班角：英北方轉上與望後，現車來種。有名家個小動去早流軍另後料己別！來病小，別是樂小一定面資一首，現動表時放拿然積廣，字原得例文族、意有第在空說車……會教大聽打走
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ******* section04 服務項目 ******* -->
+  <section class="section04" id="section04">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center my-3">
+          <h3>
+            <i class="fa-solid fa-shrimp fa-1x"></i>
+            每日特餐
+            <i class="fa-solid fa-shrimp fa-1x"></i>
+          </h3>
+          <p class="px-2">的馬、物環利防朋可以什放一小裡老受媽曾著觀找再面是留有病院日個空神場者回最工聲無不有化；現李告下後參小，他果了學長有小得這！列眾話想度還候有就一政。料應的突的</p>
+        </div>
+        <div class="col-md-4 text-center my-3">
+          <h3>
+            <i class="fa-solid fa-wine-glass fa-1x"></i>
+            酒品小酌
+            <i class="fa-solid fa-wine-glass fa-1x"></i>
+          </h3>
+          <p class="px-2">的馬、物環利防朋可以什放一小裡老受媽曾著觀找再面是留有病院日個空神場者回最工聲無不有化；現李告下後參小，他果了學長有小得這！列眾話想度還候有就一政。料應的突的</p>
+        </div>
+        <div class="col-md-4 text-center my-3">
+          <h3>
+            <i class="fa-solid fa-cake-candles fa-1x"></i>
+            精選甜點
+            <i class="fa-solid fa-cake-candles fa-1x"></i>
+          </h3>
+          <p class="px-2">的馬、物環利防朋可以什放一小裡老受媽曾著觀找再面是留有病院日個空神場者回最工聲無不有化；現李告下後參小，他果了學長有小得這！列眾話想度還候有就一政。料應的突的</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ******* section05 場地空間 ******* -->
+  <section class="position-relative section05" id="section05">
+    <div class="row">
+      <div id="section05-pic05" class="col-md-5 bg-cover position-absolute" style="
+        background-image: url(https://source.unsplash.com/OFJGlG3sKik);
+        top: 0;
+        bottom: 0;
+        "></div>
+    </div>
+    <div class="container py-3">
+      <div class="row justify-content-end">
+        <div class="col-md-7">
+          <h2 class="fw-900">場地空間</h2>
+          <p>果資最緊，客機如以看著接能不：爭來一？會高及一那記又住有面年一，的備並點過成約山馬大，有產做多，外草數線天。林聲買</p>
+          <button class="btn btn-outline-success">了解更多</button>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <h4 class="fw-700">方案A</h4>
+              <p>
+                間，產工突；和美統黑話區意留選還他拿球自錯精廠百元巴任。問看者：講公他那。緊藥不一天，好出們地色不富，他死適心環生笑票，要把難而這會手個生談，機那弟腦天心時意工家
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h4 class="fw-700">方案B</h4>
+              <p>
+                門率文利城光他一法電山電。易事國以圖以；功到教現心代在展幾數望到領心清與不理西想要，政本運
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ******* section06 客製化菜單 ******* -->
+  <section class="" id="section06">
+    <div class="container">
+      <h1 class="p-4 text-center">客製化菜單</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="d-flex justify-content-center align-items-center me-3">
+              <i class="fa-solid fa-fish-fins fa-5x text-danger"></i>
+            </div>
+            <div class="">
+              <h3>公因外公他半品外</h3>
+              <p class="p-2">我備黑力、車思的價家為接一求車可基我提了下一多定南本人有士時國廣：官樹母筆，指法確成生習是行下然師趣？草臺三他男總世先可有導以子新、實取友動加不了子後，育</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="d-flex justify-content-center align-items-center me-3">
+              <i class="fa-solid fa-drumstick-bite fa-5x text-warning"></i>
+            </div>
+            <div class="">
+              <h3>公因外公他半品外</h3>
+              <p class="p-2">我備黑力、車思的價家為接一求車可基我提了下一多定南本人有士時國廣：官樹母筆，指法確成生習是行下然師趣？草臺三他男總世先可有導以子新、實取友動加不了子後，育</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="d-flex justify-content-center align-items-center me-3">
+              <i class="fa-solid fa-fish-fins fa-5x text-danger"></i>
+            </div>
+            <div class="">
+              <h3>公因外公他半品外</h3>
+              <p class="p-2">我備黑力、車思的價家為接一求車可基我提了下一多定南本人有士時國廣：官樹母筆，指法確成生習是行下然師趣？草臺三他男總世先可有導以子新、實取友動加不了子後，育</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="d-flex justify-content-center align-items-center me-3">
+              <i class="fa-solid fa-drumstick-bite fa-5x text-warning"></i>
+            </div>
+            <div class="">
+              <h3>公因外公他半品外</h3>
+              <p class="p-2">我備黑力、車思的價家為接一求車可基我提了下一多定南本人有士時國廣：官樹母筆，指法確成生習是行下然師趣？草臺三他男總世先可有導以子新、實取友動加不了子後，育</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ******* section07 特選食材 ******* -->
+  <section class="position-relative section07" id="section07">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h3 class="fw-900 fs-1 mb-5">特選食材</h3>
+          <dl class="row">
+            <dt class="col-sm-3">肉品</dt>
+            <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+            <dt class="col-sm-3">蔬食</dt>
+            <dd class="col-sm-9">
+              <p>Definition for the term.</p>
+              <p>And some more placeholder definition text.</p>
+            </dd>
+
+            <dt class="col-sm-3">葡萄酒</dt>
+            <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+
+            <dt class="col-sm-3 text-truncate">甜點</dt>
+            <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+
+            <dt class="col-sm-3">葡萄酒</dt>
+            <dd class="col-sm-9">
+              <dl class="row">
+                <dt class="col-sm-4">Nested definition list</dt>
+                <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your
+                  definition list.</dd>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+    </div>
+    <div class="row justify-content-end">
+      <div id="section07-pic07" class="col-md-5 bg-cover position-absolute" style="
+        background-image: url(https://source.unsplash.com/Ssb24Sick7E);
+        top: 0;
+        bottom: 0;
+        ">
+      </div>
+    </div>
+  </section>
+
+  <!-- ******* section08 聯絡我們 ******* -->
+  <section class=" my-5" id="section08">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14564.905876423354!2d120.64002397874324!3d24.1286836255068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693db15b74e261%3A0x400cf6c2b8dac047!2z5aW95biC5aSaIOWPsOS4reW6lw!5e0!3m2!1szh-TW!2stw!4v1683854902187!5m2!1szh-TW!2stw"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="clientname" class="form-label">姓名</label>
+            <input type="text" name="clientname" id="clientname" class="form-control" placeholder="姓名字數2~5!">
+            <div class="valid-feedback">格式正確</div>
+            <div class="invalid-feedback">格式錯誤</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="clientphone" class="form-label">電話</label>
+            <input type="text" name="clientphone" id="clientphone" class="form-control" placeholder="字數10!">
+            <div class="valid-feedback">格式正確</div>
+            <div class="invalid-feedback">格式錯誤</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="" class="form-label">email</label>
+            <input type="email" name="email" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label for="">人數</label>
+            <input type="number" class="form-control" min="0" max="50" value="1">
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                葷食
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                素食
+              </label>
+            </div>
+
+          </div>
+          <div class="text-end">
+            <button class="btn btn-secondary">清除</button>
+            <button class="btn btn-primary">送出</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ******* section11 消息公告 ******* -->
+  <section class="position-relative py-5 section11" id="section11">
+    <div class="row">
+      <div id="section11-pic11" class="col-md-5 bg-cover position-absolute" style="
+        background-image: url(https://source.unsplash.com/D3XN7ziCqWE);
+        top: 0;
+        bottom: 0;">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-7">
+          <h2>消息公告</h2>
+          <p class="p-2">
+            主角名單水溝複製歡迎相信還不成了大廈今天要是長時間公開，化工所有交通各位再度怎麼樣丈夫，司機會員一張，病毒眼神全新考察女孩平方米浙江區域，做法當前，離開沉默旅遊浪費外貿告訴一旦，平衡之間找到成本不少具有誘惑民主對話其實開心情人，原創處理開發商那天，體育足。
+          </p>
+          <p class="p-2">
+            這種尊重專利真是平方米伺服器公路操作，看著他是人類總結床上地面雙手前後英國中心，龍岡都市公斤另一個所說所在去了通信服裝一件可愛總體初步，提前一天協助理解崇拜深刻合作容量戰略，我把也會嘗試沒有任何成長共同裝飾隨着語文上漲團結相比你怎麼，記者成績，為什麼，網。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ******* section09 加入我們 ******* -->
+  <section class="my-5" id="section09">
+    <div class="row">
+      <div class="col-md-6 py-5 bg-cover" style="
+      background-image: url(https://source.unsplash.com/4NQEvxW2_4w);">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 section09_text">
+            <small class="badge text-bg-danger mb-2">加入我們</small>
+            <h3 class="fw-900">徵求主廚</h3>
+            <p class="fw-700">定義為此權益，各位短信尺寸無奈，又是事件真實性對我不到接近，一對建議，小學一路沒事二手策劃一部算是種種僅供為此，國產鐵路，模擬開通。</p>
+            <button class="btn btn-danger">了解更多</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 py-5 bg-cover" style="
+      background-image: url(https://source.unsplash.com/I4sxk05Fxn0);">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 section09_text">
+            <small class="badge text-bg-danger mb-2">加入我們</small>
+            <h3 class="fw-900">徵求服務生</h3>
+            <p class="fw-700">定義為此權益，各位短信尺寸無奈，又是事件真實性對我不到接近，一對建議，小學一路沒事二手策劃一部算是種種僅供為此，國產鐵路，模擬開通。</p>
+            <button class="btn btn-danger">了解更多</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ******* section10 友站連結 ******* -->
+  <section class="">
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link disabled">CopyRight 202305 by 跨平台</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Facebook</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">合作商家</a>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+
+  <script>
+
+    let clientnameFlag = false
+    let clientphoneFlag = false
+
+
+
+
+    $(function () {
+
+
+
+      $('#clientname').bind('input propertychange', function () {
+        if ($(this).val().length > 2 && $(this).val().length < 5) {
+          $(this).removeClass('is-invalid');
+          $(this).addClass('is-valid');
+          clientnameFlag = true;
+        } else {
+          $(this).removeClass('is-valid');
+          $(this).addClass('is-invalid');
+          clientnameFlag = false;
+        }
+      })
+
+      $('#clientphone').bind('input propertychange', function () {
+        if ($(this).val().length == 10 ) {
+          $(this).removeClass('is-invalid');
+          $(this).addClass('is-valid');
+          clientphoneFlag = true;
+        } else {
+          $(this).removeClass('is-valid');
+          $(this).addClass('is-invalid');
+          clientphoneFlag = false;
+        }
+      })
+
+
+
+
+
+
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html>
